@@ -9,24 +9,34 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #faf7f7;
+    padding: 0px 20px 0px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
     width: 400px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger
+}
+.logo, img{
+    justify-content: center ;
+    align-items: center;
+    height: 150px;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 
 h1 {
     text-align: center;
     color: #000000;
-    cursor:w
+    cursor:w;
+    font-size: 20px;
+    padding: 0px 0px 20px 0px;
+
+
 }
-h2{
-    text-align: center;
-    color: #00ff37;
-    border: #000000;
-    border-radius: 2px;
-}
+
+
 
 .form-group {
     margin-bottom: 15px;
@@ -74,6 +84,6 @@ button:hover {
 }
 
 .tipo-km.selected {
-    background-color: #007bff;
+    background-color: #28ac07;
     color: #fff;
 }
