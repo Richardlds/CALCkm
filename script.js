@@ -35,7 +35,7 @@ function calcular() {
     const valorKmExcedente = kmsExcedente * valorPorKm;
     const valorTotal = saidaValor + valorKmExcedente + taxa;
     const taxaVolare = valorTotal * 0.22; // Cálculo da TAXA VOLARE (22% do valor total)
-    const valorNegociar = valorTotal - (valorTotal * 0,5) - taxaVolare; // Cálculo do VALOR A NEGOCIAR
+    const valorNegociar = valorTotal - taxaVolare - (valorTotal * 0,5); // Cálculo do VALOR A NEGOCIAR
 
     document.getElementById('saida').value = `R$ ${saidaValor.toFixed(2)}`;
     document.getElementById('kmsExcedente').value = `${kmsExcedente} KM`;
