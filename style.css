@@ -21,6 +21,12 @@ h1 {
     color: #000000;
     cursor:w
 }
+h2{
+    text-align: center;
+    color: #00ff37;
+    border: #000000;
+    border-radius: 2px;
+}
 
 .form-group {
     margin-bottom: 15px;
