@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de KM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de KM</h1>
+        <div class="form-group">
+            <label for="km">KM:</label>
+            <input type="number" id="km" placeholder="Digite o KM atual" oninput="calcular()">
+        </div>
+        <div class="form-group">
+            <label for="kmTotal">KM TOTAL:</label>
+            <input type="text" id="kmTotal" readonly>
+        </div>
+        <div class="form-group">
+            <label>Tipo de KM:</label>
+            <div>
+                <span class="tipo-km" data-value="leve" onclick="selecionarTipoKm(this)">Leve (R$ 2.52/km)</span>
+                <span class="tipo-km" data-value="utilitario" onclick="selecionarTipoKm(this)">Utilitário (R$ 2.65/km)</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="saida">SAÍDA:</label>
+            <input type="text" id="saida" readonly>
+        </div>
+        <div class="form-group">
+            <label for="kmsExcedente">KMS EXCEDENTE:</label>
+            <input type="text" id="kmsExcedente" readonly>
+        </div>
+        <div class="form-group">
+            <label for="taxa">FEE:</label>
+            <input type="text" id="taxa" readonly>
+        </div>
+        <div class="form-group">
+            <label for="valorTotal">VALOR TOTAL  FACIL ASSIST:</label>
+            <input type="text" id="valorTotal" readonly>
+        </div>
+        <div class="form-group">
+            <label for="taxaVolare">TAXA VOLARE:</label>
+            <input type="text" id="taxaVolare" readonly>
+        </div>
+        <div class="form-group">
+            <label for="valorNegociar">VALOR A NEGOCIAR:</label>
+            <input type="text" id="valorNegociar" readonly>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
