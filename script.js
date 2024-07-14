@@ -36,13 +36,14 @@ function calcular() {
     const valorTotal = saidaValor + valorKmExcedente + taxa;
     const taxaVolare = valorTotal * 0.22; // Cálculo da TAXA VOLARE (22% do valor total)
     const valorNegociar = valorTotal - taxaVolare - (valorTotal * 0.05); // Cálculo do VALOR A NEGOCIAR
-
+    const levaTraz = valorTotal - taxaVolare + (valorTotal * 1.5 + saidaValor)
     document.getElementById('saida').value = `R$ ${saidaValor.toFixed(2)}`;
     document.getElementById('kmsExcedente').value = `${kmsExcedente} KM`;
     document.getElementById('taxa').value = `R$ ${taxa.toFixed(2)}`;
     document.getElementById('valorTotal').value = `R$ ${valorTotal.toFixed(2)}`;
     document.getElementById('taxaVolare').value = `R$ ${taxaVolare.toFixed(2)}`;
     document.getElementById('valorNegociar').value = `R$ ${valorNegociar.toFixed(2)}`;
+    document.getElementById('levaTraz').value = `R$ ${levaTraz.toFixed(2)}`;
 }
 
 // Chamar calcular inicialmente para exibir os valores padrão
