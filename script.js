@@ -20,28 +20,26 @@ function calcular() {
     const km = parseFloat(document.getElementById('km').value) || 0;
     const kmTotal = (km + 5) * 2;
     document.getElementById('kmTotal').value = kmTotal.toFixed(2);
-    
+
     const tipoKm = document.querySelector('.tipo-km.selected').getAttribute('data-value');
     let saidaValor;
     let valorPorKm;
-    
+
     if (tipoKm === 'leve') {
         saidaValor = 164.71;
         valorPorKm = 2.52;
     } else if (tipoKm === 'utilitario') {
         saidaValor = 263.86;
         valorPorKm = 2.65;
-    }
-    else if (tipoKm === 'taxi') {
-        saidaValor =  83.97;
+    } else if (tipoKm === 'taxi') {
+        saidaValor = 83.97;
         valorPorKm = 1.82;
     }
-    
 
     const patinsSelecionado = document.querySelector('.patins.selected').getAttribute('data-value') === 'sim';
     const valorPatins = 320;
-
     let valorTotal = saidaValor;
+
     if (patinsSelecionado) {
         valorTotal += valorPatins;
     }
@@ -53,7 +51,7 @@ function calcular() {
 
     const taxaVolare = valorTotal * 0.22;
     const valorNegociar = valorTotal - taxaVolare;
-    const levaTraz = (valorTotal + patinsSelecionado) * 1.5 + patinsSelecionado + saidaValor;
+    const levaTraz = (valorTotal + (patinsSelecionado ? valorPatins : 0)) * 1.5 + saidaValor;
 
     document.getElementById('saida').value = `R$ ${saidaValor.toFixed(2)}`;
     document.getElementById('kmsExcedente').value = `${kmsExcedente} KM`;
