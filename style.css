@@ -120,22 +120,16 @@ button:hover {
 
     }
 
-    .logo, img{
+    .logo img{
         justify-content: center ;
         height: 100px;
         display: flex;
     }
-    .logo, img{
-        justify-content: center ;
-        align-items: center;
-        height: 100px;
-        display: flex;
-        margin: 0px;
-        padding: 0px;
-    }
+   
+    
     
 h1 {
-    height: 100px;
+    height: 125px;
     text-align: center;
     color: #000000;
     cursor:w;
