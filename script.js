@@ -32,6 +32,11 @@ function calcular() {
         saidaValor = 263.86;
         valorPorKm = 2.65;
     }
+    else if (tipoKm === 'taxi') {
+        saidaValor =  83.97;
+        valorPorKm = 1.82;
+    }
+    
 
     const patinsSelecionado = document.querySelector('.patins.selected').getAttribute('data-value') === 'sim';
     const valorPatins = 320;
