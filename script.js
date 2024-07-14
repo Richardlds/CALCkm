@@ -1,27 +1,30 @@
 function selecionarTipoKm(element) {
-    // Remove a classe 'selected' de todos os spans de tipo-km
     const spans = document.querySelectorAll('.tipo-km');
     spans.forEach(span => {
         span.classList.remove('selected');
     });
-
-    // Adiciona a classe 'selected' ao span clicado
     element.classList.add('selected');
+    calcular();
+}
 
-    // Chama a função para calcular sempre que o tipo de KM for alterado
+function selecionarPatins(element) {
+    const spans = document.querySelectorAll('.patins');
+    spans.forEach(span => {
+        span.classList.remove('selected');
+    });
+    element.classList.add('selected');
     calcular();
 }
 
 function calcular() {
     const km = parseFloat(document.getElementById('km').value) || 0;
-    const kmTotal = (km + 5) * 2; // Cálculo do KM TOTAL
-    document.getElementById('kmTotal').value = kmTotal;
-
+    const kmTotal = (km + 5) * 2;
+    document.getElementById('kmTotal').value = kmTotal.toFixed(2);
+    
     const tipoKm = document.querySelector('.tipo-km.selected').getAttribute('data-value');
-
     let saidaValor;
     let valorPorKm;
-
+    
     if (tipoKm === 'leve') {
         saidaValor = 164.71;
         valorPorKm = 2.52;
@@ -30,13 +33,23 @@ function calcular() {
         valorPorKm = 2.65;
     }
 
+    const patinsSelecionado = document.querySelector('.patins.selected').getAttribute('data-value') === 'sim';
+    const valorPatins = 320;
+
+    let valorTotal = saidaValor;
+    if (patinsSelecionado) {
+        valorTotal += valorPatins;
+    }
+
     const taxa = 47;
     const kmsExcedente = kmTotal > 40 ? kmTotal - 40 : 0;
     const valorKmExcedente = kmsExcedente * valorPorKm;
-    const valorTotal = saidaValor + valorKmExcedente + taxa;
-    const taxaVolare = valorTotal * 0.22; // Cálculo da TAXA VOLARE (22% do valor total)
-    const valorNegociar = valorTotal - taxaVolare; // Cálculo do VALOR A NEGOCIAR
-    const levaTraz = valorTotal * 1.5 + saidaValor - taxaVolare;
+    valorTotal += valorKmExcedente + taxa;
+
+    const taxaVolare = valorTotal * 0.22;
+    const valorNegociar = valorTotal - taxaVolare;
+    const levaTraz = valorTotal + valorPatins * 1.5 + (valorPatins + saidaValor);
+
     document.getElementById('saida').value = `R$ ${saidaValor.toFixed(2)}`;
     document.getElementById('kmsExcedente').value = `${kmsExcedente} KM`;
     document.getElementById('taxa').value = `R$ ${taxa.toFixed(2)}`;
