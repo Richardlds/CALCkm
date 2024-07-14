@@ -48,7 +48,7 @@ function calcular() {
 
     const taxaVolare = valorTotal * 0.22;
     const valorNegociar = valorTotal - taxaVolare;
-    const levaTraz = valorTotal + valorPatins * 1.5 + (valorPatins + saidaValor);
+    const levaTraz = (valorTotal + patinsSelecionado) * 1.5 + (patinsSelecionado + saidaValor);
 
     document.getElementById('saida').value = `R$ ${saidaValor.toFixed(2)}`;
     document.getElementById('kmsExcedente').value = `${kmsExcedente} KM`;
