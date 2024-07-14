@@ -32,8 +32,6 @@ h1 {
     cursor:w;
     font-size: 20px;
     padding: 0px 0px 20px 0px;
-
-
 }
 
 
@@ -86,4 +84,72 @@ button:hover {
 .tipo-km.selected {
     background-color: #28ac07;
     color: #fff;
+}
+
+@media only screen and (max-width: 1500px) {
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        background-color: #faf7f7;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
+        width: 50em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: larger;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Define duas colunas */
+    }
+    }
+    input {
+        width: 90%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: inline-block;
+        justify-content: space-between;
+        grid-column: 2;
+
+    }
+
+    .logo, img{
+        justify-content: center ;
+        height: 100px;
+        display: flex;
+    }
+    .logo, img{
+        justify-content: center ;
+        align-items: center;
+        height: 100px;
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+h1 {
+    height: 100px;
+    text-align: center;
+    color: #000000;
+    cursor:w;
+    font-size: 15px;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.tipo-km {
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    width: 87%;
 }
