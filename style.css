@@ -113,16 +113,25 @@ button:hover {
         background-color: #faf7f7;
         border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
-        width: 50%;
+        width: 85%;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: larger;
+        font-size: medium;
         display:grid;
-        grid-template-columns: 1fr 1fr; /* Define duas colunas */
+        grid-template-columns: 1fr  1fr 1fr 1fr; /* Define duas colunas */
+        grid-template-rows: 1fr 1fr;
         
     }
+    .container h1{
+        grid-column: 3 / 5;
+
+    }
+    .logo{
+        grid-column: 3 / 2;
+    }
+    
     }
     input {
-        width: 87%;
+        width: 100%;
         padding: 10px 0px;
         box-sizing: border-box;
         border: 1px solid #ccc;
@@ -134,32 +143,14 @@ button:hover {
 
     }
 
-    .logo img{
-        justify-content: center ;
-        height: 100px;
-        display: flex;
-    }
-   
     
-    
-h1 {
-    height: 125px;
-    text-align: center;
-    color: #000000;
-    cursor:w;
-    font-size: 15px;
-    padding: 0px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
 .tipo-km {
     cursor: pointer;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    display: block;
-    width: 84%;
+    display: grid;
+    width: 100%;
 }
 @media only screen and (max-width: 800px) {
     body {
@@ -169,24 +160,26 @@ h1 {
         align-items: center;
         margin: 0;
         background-color: #f0f0f0;
-        width: 400px;
-        height: 900px;
+        width: 100%;
+        height: 100%;
         padding: 0px;
     }
     .container {
         background-color: #faf7f7;
         border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
-        width: 80%;
+        width: 90%;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: small;
+        font-size: smaller;
         display:grid;
         grid-template-columns: 1fr 1fr; /* Define duas colunas */
-        
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+  gap: 10px;
     }
     }
     input {
-        width: 50%;
+        width: 100%;
         padding: 10px 0px;
         box-sizing: border-box;
         border: 1px solid #ccc;
@@ -194,14 +187,13 @@ h1 {
         display: inline-block;
         justify-content: space-between;
         grid-column: 2;
-        padding: 10px;
 
     }
 
-    .logo img{
-        justify-content: center ;
-        height: 100px;
-        display: flex;
+.logo {
+    grid-column: 1 / 3;
+        display: grid;
+        width: 100%;
     }
    
     
@@ -215,7 +207,7 @@ h1 {
     padding: 0px 0px 0px 0px;
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: none;
 }
 .tipo-km {
     cursor: pointer;
@@ -223,7 +215,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     display: block;
-    width: 45%;
+    width: 90%;
 }
 .patins {
     cursor: pointer;
@@ -232,7 +224,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     display: block;
-    width: 45%;
+    width: 90%;
 }
 
 .patins.selected {
