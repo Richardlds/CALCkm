@@ -161,3 +161,81 @@ h1 {
     display: block;
     width: 84%;
 }
+@media only screen and (max-width: 800px) {
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #f0f0f0;
+        width: 400px;
+        height: 900px;
+        padding: 0px;
+    }
+    .container {
+        background-color: #faf7f7;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
+        width: 80%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: small;
+        display:grid;
+        grid-template-columns: 1fr 1fr; /* Define duas colunas */
+        
+    }
+    }
+    input {
+        width: 50%;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: inline-block;
+        justify-content: space-between;
+        grid-column: 2;
+        padding: 10px;
+
+    }
+
+    .logo img{
+        justify-content: center ;
+        height: 100px;
+        display: flex;
+    }
+   
+    
+    
+h1 {
+    height: 125px;
+    text-align: center;
+    color: #000000;
+    cursor:w;
+    font-size: 15px;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.tipo-km {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 45%;
+}
+.patins {
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 45%;
+}
+
+.patins.selected {
+    background-color: #28ac07;
+    color: #fff;
+}
