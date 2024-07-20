@@ -15,9 +15,12 @@ body {
     padding: 0px 20px 0px 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
-    width: 400px;
+    width: 80%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger
+    font-size: larger;
+    grid-template-columns: 1f 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    display: grid;
 }
 .logo, img{
     justify-content: center ;
@@ -107,7 +110,7 @@ button:hover {
         align-items: center;
         height: 100vh;
         margin: 0;
-        background-color: #f0f0f0;
+        background-color: #fcfcfc;
     }
     .container {
         background-color: #faf7f7;
@@ -153,10 +156,9 @@ button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin: 0px;
         background-color: #f0f0f0;
         width: 100%;
-        height: 100%;
         padding: 0px;
     }
     .container {
@@ -165,12 +167,10 @@ button:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
         width: 90%;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: smaller;
+        font-size: small;
         display:grid;
         grid-template-columns: 1fr 1fr; /* Define duas colunas */
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-  gap: 10px;
     }
     }
     input {
@@ -179,7 +179,10 @@ button:hover {
         box-sizing: border-box;
         border: 1px solid #ccc;
         border-radius: 4px;
+        text-align: center;
         display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
 
 
     }
@@ -191,19 +194,12 @@ button:hover {
     }
    
     .form-group {
-        margin-bottom: 15px;
-        padding: 10px;
+        margin-bottom: 0px;
+        padding: 5px;
+        
     }
     
 h1 {
-    height: 125px;
-    text-align: center;
-    color: #000000;
-    cursor:w;
-    font-size: 15px;
-    padding: 0px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
     display: none;
 }
 .tipo-km {

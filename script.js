@@ -19,7 +19,7 @@ function selecionarPatins(element) {
 function calcular() {
     const km = parseFloat(document.getElementById('km').value) || 0;
     const kmTotal = (km + 5) * 2;
-    document.getElementById('kmTotal').value = kmTotal.toFixed(2);
+    document.getElementById('kmTotal').value = kmTotal.toFixed(0);
 
     const tipoKm = document.querySelector('.tipo-km.selected').getAttribute('data-value');
     let saidaValor;
@@ -51,7 +51,7 @@ function calcular() {
 
     const taxaVolare = valorTotal * 0.22;
     const valorNegociar = valorTotal - taxaVolare;
-    const levaTraz = (valorTotal + (patinsSelecionado ? valorPatins : 0)) * 1.5 + saidaValor;
+    const levaTraz = (valorTotal + (patinsSelecionado ? valorPatins : 0)) * 1.5;
 
     document.getElementById('saida').value = `R$ ${saidaValor.toFixed(2)}`;
     document.getElementById('kmsExcedente').value = `${kmsExcedente} KM`;
